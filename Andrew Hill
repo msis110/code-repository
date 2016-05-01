@@ -1,17 +1,13 @@
 1 <!DOCTYPE html> 
 2 <html> 
 3 
- 
 4 <head> 
 5 
- 
 6 <!-- github.com msis110/code-repository c1058927@trbvn.com qwerty99 --> 
 7 <!-- https://github.com/msis110/code-repository --> 
 8 
- 
 9 <title>Intro To Programming Andrew Hill - Images</title> 
 10 
- 
 11 <script> 
 12  
 13 function changeImage() 
@@ -61,13 +57,10 @@
 57  
 58 </script> 
 59 
- 
 60 </head> 
 61 
- 
 62 <body> 
 63 
- 
 64 <center> 
 65 <h1>Click the image to change it !</h1> 
 66 <p> 
@@ -78,8 +71,6 @@
 71 </p> 
 72 </center> 
 73 
- 
 74 </body> 
 75 
- 
 76 </html> 
