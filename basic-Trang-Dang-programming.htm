@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- github.com msis110/code-repository c1058927@trbvn.com qwerty99 -->
+<!-- https://github.com/msis110/code-repository -->
+
+<title>Trang Dang - Intro To Programming</title>
+
+<script>
+
+function changeImage()
+{
+
+//alert("You clicked the image !");
+
+	var current_src = document.getElementById("image-rotator").getAttribute("src");
+//alert(current_src);
+
+	if(current_src == "https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-9/12321523_641357469349618_7361534268018195379_n.jpg?oh=55853b7ec560512c6ee3ab634165fe7c&oe=57B825C2")
+	{
+		current_src = "https://scontent-ord1-1.xx.fbcdn.net/hphotos-xtl1/v/t1.0-9/12806037_623758411109524_3906452777079899847_n.jpg?oh=469ea402f1c71f6f2182c880e9914941&oe=57A72F3C";
+	}
+	else
+	{
+		current_src = "https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-9/12321523_641357469349618_7361534268018195379_n.jpg?oh=55853b7ec560512c6ee3ab634165fe7c&oe=57B825C2";
+	}
+
+	document.getElementById("image-rotator").setAttribute("src", current_src);
+
+	return true;
+}
+
+function changeImageSize()
+{
+	// TODO get the width attribute value, if it is 475, set it to 800, else set it to 475
+
+//alert("You want to change the image size !");
+
+	var current_width = document.getElementById("image-rotator").getAttribute("width");
+//alert(current_width);
+
+	if(current_width == "475")
+	{
+		current_width = "800";
+	}
+	else
+	{
+		current_width = "475";
+	}
+
+	document.getElementById("image-rotator").setAttribute("width", current_width);
+
+	return true;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<center>
+<h1>  Click on my face in the picture to see another picture of my face !  </h1>
+<p> 
+<img id="image-rotator" onclick="changeImage();" width="475" 
+	alt="charles river photo" src="https://scontent-ord1-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/11902376_554212528064113_2327850295205260049_n.jpg?oh=8539a34841058d452bb759a2753d001a&oe=57AF1A50"></img>
+<br />
+<button style="color:purple;border-radius:10px;" id="size-button" onclick="changeImageSize();">ZOOM</button>
+</p>
+</center>
+
+</body>
+
+</html>
