@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- github.com msis110/code-repository c1058927@trbvn.com qwerty99 -->
+<!-- https://github.com/msis110/code-repository -->
+
+<title>Intro To Programming - Images</title>
+
+<script>
+
+function changeImage()
+{
+
+//alert("You clicked the image !");
+
+	var current_src = document.getElementById("image-rotator").getAttribute("src");
+//alert(current_src);
+
+	if(current_src == "http://images.landscapingnetwork.com/pictures/images/500x500Max/seating-area_24/dining-patio-fiore-design_3751.jpg")
+	{
+		current_src = "http://images.landscapingnetwork.com/pictures/images/500x500Max/lighting_22/fiore-design_3859.jpg";
+	}
+	else
+	{
+		current_src = "http://images.landscapingnetwork.com/pictures/images/500x500Max/seating-area_24/dining-patio-fiore-design_3751.jpg";
+	}
+
+	document.getElementById("image-rotator").setAttribute("src", current_src);
+
+	return true;
+}
+
+function changeImageSize()
+{
+	// TODO get the width attribute value, if it is 475, set it to 100, else set it to 475
+
+//alert("You want to change the image size !");
+
+	var current_width = document.getElementById("image-rotator").getAttribute("width");
+//alert(current_width);
+
+	if(current_width == "475")
+	{
+		current_width = "100";
+	}
+	else
+	{
+		current_width = "475";
+	}
+
+	document.getElementById("image-rotator").setAttribute("width", current_width);
+
+	return true;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<center>
+<h1>Click To go from Night to Day!</h1>
+<p>
+<img id="image-rotator" onclick="changeImage();" width="475" 
+	alt="Day photo" src="http://images.landscapingnetwork.com/pictures/images/500x500Max/lighting_22/fiore-design_3859.jpg"></img>
+<br />
+<button id="size-button" onclick="changeImageSize();">Change Size</button>
+</p>
+</center>
+
+</body>
+
+</html>
