@@ -4,8 +4,38 @@
   <title>
     My Image Rotator Software Application
   </title>
-  <script>
+  <script language="JavaScript">
     // TODO add functions here later
+    
+    function changeImageSize() {
+      var curWidth = document.getElementById('myImageId').getAttrib('width');
+      
+      if (curWidth == "475") {
+          curWidth = "125";
+      }
+      else {
+          curWidth = "475";
+      }
+       
+      document.getElementById('myImageId').setAttrib("width", curWidth);
+      
+      return curWidth;
+    }
+    
+    function rotateImage() {
+      var curSrc = document.getElementById('myImageId').getAttrib('src');
+       if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg") {
+           curSrc = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+      }
+      else {
+          curSrc = "http://www.onclick.com/msis110/articles/community-boating-dock.jpg";
+      }
+     
+       document.getElementById('myImageId').setAttrib("src", curSrc);
+      
+      return curSrc;
+    }
+    
   </script>
 </head>
 <body>
@@ -16,9 +46,10 @@
   <center>
   <img 
        id="myImageId" 
-       width="475" 
+       width="475"
+       onclick="rotateImage();"
        alt="Charles riverfront" 
-       scr="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" 
+       src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" 
        />
   
   <button id="sizeButtonId" onclick="changeImageSize();">
