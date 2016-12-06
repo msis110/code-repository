@@ -4,8 +4,41 @@
   <title>
     My Image Software Application ! 
   </title>
-  <script>
+  <script  language="JavaScript">
    // TODO add functions here later
+  
+    function changeImageSize() {
+    
+      var curWidth = documen.getElementById('myImageId').getAttrib('width');
+          
+      if (curWidth == "475"){
+         curWidth = "125"; 
+      }
+      else {
+         curWidth = "475"; 
+      }
+      
+      document.getElementById('myImageId').setAttrib("width", curWidth); 
+      
+      return curWidth;
+    } 
+   
+    function rotateImage() {
+      var curSrc = documen.getElementById('myImageId').getAttrib('src');
+    if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg") {
+       curSrc = "http://www.onclick.com/msis110/articles/on-the-charles.jpg"; 
+     }
+      else {
+         curSrc = "http://www.onclick.com/msis110/articles/community-boating-dock.jpg"; 
+      }
+    
+      document.getElementById('myImageId').setAttrib("Src", curSrc); 
+     
+      return curSrc;
+    }
+    
+    
+    
   </script>
 </head>
 <body>
@@ -17,8 +50,8 @@
   <img 
        id="myImageId" 
        width="475" 
-       alt="Charles riverfront" 
-       src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" />
+       alt="Charles riverfront();" 
+       src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg"
        />
   
    <button id="size-button" onclick="changeImageSize();">
