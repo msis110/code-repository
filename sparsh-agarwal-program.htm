@@ -4,15 +4,46 @@
 <title>
 My Image Rotator Software Application  
 </title>
-<script>
-// TODO add functions here later   
+<script> language="JavaScript
+// TODO add functions here later  
+  function changeimagesize(width, height)
+  {
+    var CurWidth = document.getElementById("myImageId").getAttrib('width');
+     if (curWidth =="475")
+     {
+         curWidth = "125";            
+     }     
+     else
+     {
+         curWidth = "475";       
+     }
+    
+    document.getElementById('myimageid').setAttrib("width", curwidth);
+    
+    return newWidth;    
+  }
+  
+    function rotateImage() {
+      var curSrc =var CurWidth = document.getElementById("myImageId").getAttrib('src');
+      if (cursrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg"){    
+         (cursrc = "http://www.onclick.com/msis110/articles/on-the-charles.jpg")    
+      } 
+      else {
+            cur SRC= "http://www.onclick.com/msis110/articles/community-boating-dock.jpg"
+           }
+           
+           document.getElementById('myImageId').setAttrib("src", cursrc);
+      
+           return curSrc;     
+           }     
+  
 </script>  
 </head>
 <body>
 <h2>
 click the image to change it :    
 </h2>
-<img id="myImageId" width="475" alt="Charles riverfront" src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg">"" />
+<img id="myImageId" width="475" onClick="rotateImage();" alt="Charles riverfront" src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg">"" />
 <button id="SizeButtonId" onclick="changeImageSize();">
   Change Image Size
 </button>
