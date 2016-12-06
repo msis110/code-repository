@@ -4,8 +4,27 @@
 <title>
 My Image Rotator Software Application
 </title>
-<script>
+<script language="JavaScript">
   // TODO add Functions here later
+  
+  function changeImageSize(width,height)
+  { 
+    var curWidth =document.getElementById('myImageId').getAttrib('width');
+    
+    if(curWidth=="475")
+       {
+        curWidth="125";
+       }
+       else
+       {
+         curWidth="425";
+       }
+        
+    document.getElementById('myImageId').setAttrib("width",curWidth);
+    
+    return newWidth;    
+  }
+  
 </script>
 </head>
 <body>
