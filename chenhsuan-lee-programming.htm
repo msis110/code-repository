@@ -1,33 +1,71 @@
 <!DOCTYPE html>
 <html>
-  
-  <head>
-  
+<head>
   <title>
-    Image Rotator And Resizer
+    My Image Rotator Software Application
   </title>
-  
-  <script>
+  <script language="JavaScript">
     // TODO we need to add the image click and button event logic here
-  </script>
     
-  </head>
-  
-  <body>
-  <center>
+    function rotateImage()
+      {
+        var success = false;
+        
+       var curSrc ==document.getElementBy("myImageId").getAttrib("src");
+        
+        if (curSrc =="http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+        {
+          var url = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+          document.getElementById("myImageId").setAttrib("src", url);
+          success = true
+        }
+        else
+        {
+          document.getElementById("myImageId").setAttrib("http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+          success = true;
+        }
+        
+        return success;
+      }
+      
+      function changeImageSize() 
+      {
+        var success = false;
+        
+        var curImageSize = document.getElementBy("myImageId"). getAttrib("width");
+        
+        if(curImageSize =="475")
+           {
+           document.getElementById("myImageId").setAttrib("width", "125");
+             success = true;
+           }
+           else
+           {
+           document.getElementById("myImageId").setAttrib("width", "475");
+             success = true;
+           }
+        
+        return success;
+      }
+    
+  </script>
+   </head>
+   <body>
     <h2>
       Click the image to change it !
-    </h2>
-    
-    <img id="myImageId" 
+    </h2>  
+     
+   <center> 
+    <img 
+         id="myImageId" 
          width="475" 
          alt="dockside river scene" 
          src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg"
          />
     
-    <button id="btnButtonId">Change Size</button>
-    
+    <button id="btnButtonId" onClick="changeImageSize();">
+    Change Image Size
+    </button>        
   </center>
-  </body>
-  
+  </body>  
   </html>
