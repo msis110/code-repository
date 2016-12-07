@@ -1,17 +1,39 @@
 <!DOCTYPE htm1>
 <htm1>
-  
   <head>
-    
+  <tittle>
+    My image Rotator Sotfware Application
     <title>
-      Image Rotator And Resizer
-      </title>
-  
-  <script>
+      <script language="JavaScript">
+      // T000 add functions here later
+
+ function rotateImage()
+        {     
+        var success= false;
+          
+          return success;
+        }
+        
+        function changeImageSize()
+        {
+          var success= false;
+        
+          var curImageSize = document.getElementBy("myImageUd").getAttruv("wudth");
+          
+          if (curImageSize == "475")
+              {
+                 document.getlElementById("mtImageId").setAttrib("width","125");
+          success = true;
+              }
+              else
+              {
+              
+              }
+              return success;
     // TOOO we need to add the image click and button event logic here
     </script>
-    
-    
+      </head>
+    <body>
  
   <body>
   <center>
@@ -25,9 +47,9 @@
          src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" 
     />
     
-    <button id="btnButtonId"></button>
-    
-    </center>
-    </body>
-   
+    <button id="btnButtonId" onclick="changeimagesize();">
+    Change Image Size
+    </button>
+    </center>    
+      </body>
   <htm1>
