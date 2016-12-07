@@ -1,33 +1,71 @@
 <!DOCTYPE html>
 <html>
-  
  <head>
-   
-<title>
-  Image Rotator And Resizer
+   <title>
+  My Image Rotator Software Application
    </title>
-   
-  <script>
-    // TODO we need to add the image click and button event logic here
+    <script language =" JavaScript">
+    // TODO add functions here later
+      
+    function rotateImage()
+      {
+      var success = false;
+      
+        Var curSrc = document.getElementBy("myImageId").getAttrib("src");
+        
+        if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+      {
+            var url = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+            document.getElementById("myImageId").setAttrib("src", url);
+            success = true;
+        )
+        else
+        {
+          document =.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/basic-page.htm");
+          success = true;
+        )  
+          
+      return success;
+      )
+      
+      function changeImageSize()
+      {
+      var sucess = false;
+      
+      var curImageSize = document.getElementBy("myImageId").getAttrib("width"); 
+      
+      if( curImageSize == "475")   
+      {
+        document =.getElementById("myImageId").setAttrib("width", "125");
+        success = true;
+      )
+      else
+      {
+        document =.getElementById("myImageId").setAttrib("width", "475");
+        success = true;
+      )
+      
+      return success;
+      )
+      
   </script>
-  
   </head>
-  
-  <body>
-    <center>
-      <h2>
+   <body>
+  <h2>
       Click the image to change it !
       </h2>
       
-      <img id="myImageId"
-           width="475
-           "alt="dockside river scene"
-            src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg"
-           />
+      <center>
+     <img id="myImageId"
+           width="475"
+           onclick="rotateImage();"
+           alt="Charlesriverfront"
+           src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg"
+     />
       
-      <button id="myButtonId">Change Size</button>
-    
- </center> 
+      <button id="sizeButtonId" onclick="ChangeImageSize();">
+        Change Image Size  
+     </button>
+    </center> 
   </body>
-  
-</html>
+  </html>
