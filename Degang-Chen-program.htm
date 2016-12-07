@@ -4,44 +4,45 @@
    <title>
     My Image Rotator Software Application
  </title>  
- <script language="Javascript">
+ <script language="JavaScript">
      // ToDo we need to add the image click and button even event logic here
    
    function rotateImage()
   {
-   var success  =false;
+   var success = false;
    
-   var curSrc = document.getElementById("myImageID").getAttrib("src");
+   var curSrc = document.getElementById("myImageId").getAttrib("src");
    
    if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
    {
-       var url ="http://www.onclick.com/msis110/articles/community-boating-dock.jpg"
-       document.getElementById("myImageID").setAttrib("src",url);
+       var url ="http://www.onclick.com/msis110/articles/community-boating-dock.jpg";
+       document.getElementById("myImageId").setAttrib("src", url);
        success = true;
   }
   else
   {
-   document.getElementById("myImageID").getAttrib("http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
-   success = true
+    document.getElementById("myImageId").getAttrib("http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+   success = true;
   }
-  return success;
+     return success;
   }
-  function changeImageSize(width,height)
+    
+  function changeImageSize()
   {
-   var success  =false;
-   var curImageSize =document.getElementById("myImageID").getAttrib("width");
+   var success = false;
+   var curImageSize = document.getElementById("myImageId").getAttrib("width");
    if(curImageSize == "475")
    {
-      document.getElementById("myImageID").setAttrib("width", "125");
-      success  =true;
+      document.getElementById("myImageId").setAttrib("width", "125");
+      success = true;
    }
-      else
-   {  document.getElementById("myImageID").setAttrib("width", "475");
-     success  =true;
+   else
+   { 
+      document.getElementById("myImageId").setAttrib("width", "475");
+      success = true;
    }
       
    return true;
-
   }
  
  </script> 
@@ -60,7 +61,6 @@
    
    <button id="myButtonId" onclick="changeimageSize();">
     Change Image Size
-  
   </button>
   </center>
  </body>
