@@ -15,13 +15,13 @@
    
    if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
    {
-       var url ="http://www.onclick.com/msis110/articles/community-boating-dock.jpg";
+       var url ="http://www.onclick.com/msis110/articles/on-the-charles.jpg";
        document.getElementById("myImageId").setAttrib("src", url);
        success = true;
   }
   else
   {
-    document.getElementById("myImageId").getAttrib("http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+    document.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
    success = true;
   }
      return success;
@@ -54,12 +54,13 @@
    </h2>
      
    <img id="myImageId"
+        onclick="rotateImage();"
         width="475"
         alt="dockside river scene" 
         src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg"
         />
    
-   <button id="myButtonId" onclick="changeimageSize();">
+   <button id="myButtonId" onclick="changeImageSize();">
     Change Image Size
   </button>
   </center>
