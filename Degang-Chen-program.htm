@@ -1,33 +1,68 @@
 <!DOCTYPE html>
 <html>
-
- <head>
-  
- <title>
-    Image Rotator And Resizer
+<head>
+   <title>
+    My Image Rotator Software Application
  </title>  
-   
- <script> 
+ <script language="Javascript">
      // ToDo we need to add the image click and button even event logic here
- </script> 
-  
-  </head>
+   
+   function rotateImage()
+  {
+   var success  =false;
+   
+   var curSrc = document.getElementById("myImageID").getAttrib("src");
+   
+   if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
+   {
+       var url ="http://www.onclick.com/msis110/articles/community-boating-dock.jpg"
+       document.getElementById("myImageID").setAttrib("src",url);
+       success = true;
+  }
+  else
+  {
+   document.getElementById("myImageID").getAttrib("http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+   success = true
+  }
+  return success;
+  }
+  function changeImageSize(width,height)
+  {
+   var success  =false;
+   var curImageSize =document.getElementById("myImageID").getAttrib("width");
+   if(curImageSize == "475")
+   {
+      document.getElementById("myImageID").setAttrib("width", "125");
+      success  =true;
+   }
+      else
+   {  document.getElementById("myImageID").setAttrib("width", "425");
+     success  =true;
+   }
+      
+   return true;
 
- <body>
+  }
+ 
+ </script> 
+</head>
+<body>
  <center>
    <h2>
-     Click the image to change it !
+     Click the image to change it :
    </h2>
      
    <img id="myImageId"
         width="475"
         alt="dockside river scene" 
-        src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" />
+        src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg"
+        />
    
-   <button id="myButtonId">Change Size</button>
-   
- </center>
+   <button id="myButtonId" onclick="changeimageSize();">
+    Change Image Size
+  
+  </button>
+  </center>
  </body>
-
-</html>
+ </html>
    
