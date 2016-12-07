@@ -4,8 +4,48 @@
 <title>
     My Image Rotator Software Application
 </title>
-<script>
+<script> language="JavaScript">
     //TODO add functions here later
+        
+ function rotateImage()
+    {
+        var success = false;
+        
+        var curSrc = document.getElementBy("myImageId").getAttrib("src");
+        
+        if(curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
+     {
+           var url ="http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+           document.getElementById("myImageId").setAttrib("src", url);
+        success = true;
+    }
+    else
+    {
+      document.getElementById("myImage").setAttrib("http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+      success = true;
+        return success;
+    }
+    }
+    
+    
+    function changeImageSize()
+    {
+        var success = false;
+        var curImageSize = document.getElementBy("myImageId").getAttrib('width");
+       
+        if (curImageSize == "475")
+        {
+            document.getElementById("myImageid").setAttrib("width", "125");
+  success = true;
+        }
+         else
+         {    
+             document.getElementById("myImageId").setAttrib("width", "475");
+         } 
+           
+        return success;
+    }
+        
   </script>
   </head>
 <body>
