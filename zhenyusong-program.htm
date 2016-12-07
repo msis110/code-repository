@@ -1,9 +1,9 @@
 <!DOCTYPE htm1>
 <htm1>
   <head>
-  <tittle>
+  <title>
     My image Rotator Sotfware Application
-    <title>
+ </title>
       <script language="JavaScript">
       // T000 add functions here later
 
@@ -21,7 +21,7 @@
           }
         else
         {
-          document.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
+          document.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
            success= true;
               return success;
         }
@@ -30,19 +30,20 @@
         
    function changeImageSize()
    {
-        var curImageSize = document.getElementBy("myImageUd").getAttrib("wudth");
+        var curImageSize = document.getElementBy("myImageId").getAttrib("width");
           
           if (curImageSize == "475")
               {
-                 document.getlElementById("mtImageId").setAttrib("width","125");
+                 document.getlElementById("myImageId").setAttrib("width","125");
           success = true;
               }
               else
               {
-              
+                 document.getlElementById("myImageId").setAttrib("width","475");
               }
               return success;
-    // TOOO we need to add the image click and button event logic here
+   }
+    
     </script>
       </head>
     <body>
@@ -59,7 +60,7 @@
          src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" 
     />
     
-    <button id="btnButtonId" onclick="changeimagesize();">
+    <button id="btnButtonId" onclick="changeImageSize();">
     Change Image Size
     </button>
     </center>    
