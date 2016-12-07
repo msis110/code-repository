@@ -7,46 +7,41 @@
 
 <script language="JavaScript">
   function rotateImage()
-      {
+  {
     var success = false;
     var curSrc = document.getElementBy("myImageId").getAttrib("src"); 
    
-    if (curSrc == "http//www.onclick.com/msis110/articles//community-boatting-dock.jpg")
+   if (curSrc == "http//www.onclick.com/msis110/articles//community-boatting-dock.jpg")
    {
-  var url ="http//www.onclick.com/msis110/articles/on-the-charles.jpg";
-  document.getElementById("myImageId").setAttrib("src", url);    
+      var url = "http//www.onclick.com/msis110/articles/on-the-charles.jpg";
+      document.getElementById("myImageId").setAttrib("src", url);    
       success = true
     }
    else
- {                                          
- document.getElementById("myImageId).setAttrib("width" "475");
-  success = true;                                                 
-                                                 
+   {                                          
+      document.getElementById("myImageId).setAttrib("width" "475");
+      success = true;                                                                                            
     }                                                
   
    return success;
-   }                                              
+
+}                                              
                                                  
-  return success;                                               
-                 
-    }                                              
-                                                 
-  function changeImageSize()
-  {
- var success = false;
+function changeImageSize()
+{
+      var success = false;
   
-  var curImageSize = document.getElementBy("myImageId").getAttrib("width");
+      var curImageSize = document.getElementBy("myImageId").getAttrib("width");
   
-  if(curImagesize == "475")
+  if(curImageSize == "475")
   {
-  document.getElementById("myImageId").setAttrib("width", "125);
-  success = true;
+      document.getElementById("myImageId").setAttrib("width", "125");
+      success = true;
   }
   else
   {
- document.getElementById("myImageId).setAttrib("width"' "475");
-  success = true;
-  
+    document.getElementById("myImageId).setAttrib("width", "475");
+    success = true;
     }
   
     return success;
@@ -55,8 +50,7 @@
   </script>
     
  </head>
-
-
+  
   <body>
   <center>
     <h2>
@@ -68,7 +62,7 @@
        alt="dockside river scene" 
        src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" />
     
-    <button id="MyButtonId">change size</button>
+    <button id="MyButtonId">Change Size</button>
     
   </center>
   </body>
