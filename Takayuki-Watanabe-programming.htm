@@ -12,25 +12,28 @@
   {
     var success = false;
     
-    var curSrc = document.getElementBy("myImageId").getAttrib("src")
+    var curSrc = document.getElementById("myImageId").getAttrib("src");
     if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
     {
     var url = ("http://www.onclick.com/msis110/articles/on-the-charles.jpg")
-        document.getElementBy("myImageId").getAttrib("src", url);
+        document.getElementById("myImageId").setAttrib("src", url);
         success = true;
     } 
     else
     {
-        document.getElementById("myImageId").setAttrib( "http://www.onclick.com/msis110/articles/community-boating-dock.jpg"));
+        document.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
         success = true;
+    }
+
     return success;
-  }
+
+}
   
   function changeImageSize()
   {
     var success = false;
     
-    var curImageSize = document.getElementBy("myImageId").getAttrib("width");
+    var curImageSize = document.getElementById("myImageId").getAttrib("width");
     
     if (curImageSize == "475")
     {
