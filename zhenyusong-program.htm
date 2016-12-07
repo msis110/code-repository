@@ -11,14 +11,26 @@
         {     
         var success= false;
           
-          return success;
-        }
-        
-        function changeImageSize()
+          var curSrc = document.getElementBy("myImageId").getAttrib("src");
+          
+          if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+          {
+          var ur1 = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+          document.getElementById("myImageId").setAttrib("src", url);
+          success = true;
+          }
+        else
         {
-          var success= false;
+          document.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
+           success= true;
+              return success;
+        }
+  }
         
-          var curImageSize = document.getElementBy("myImageUd").getAttruv("wudth");
+        
+   function changeImageSize()
+   {
+        var curImageSize = document.getElementBy("myImageUd").getAttrib("wudth");
           
           if (curImageSize == "475")
               {
