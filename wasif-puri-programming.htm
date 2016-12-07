@@ -9,40 +9,39 @@
 
   function rotateImage()
   {
+    var curSrc = document.getElementById("myImageId").getAttribute("src"); 
 
-    var curSrc = document.getElementBy("myImageId").getAttribute("src"); 
-alert("here");
-/*   
-   if (curSrc == "http//www.onclick.com/msis110/articles//community-boatting-dock.jpg")
+   if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
    {
-      var url = "http//www.onclick.com/msis110/articles/on-the-charles.jpg";
+      var url = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+
       document.getElementById("myImageId").setAttribute("src", url);    
     }
    else
-   {                                          
-      document.getElementById("myImageId").setAttribute("src", "http//www.onclick.com/msis110/articles//community-boatting-dock.jpg");                                                                                            
+   {    
+      document.getElementById("myImageId").setAttribute("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
     }                                                
-  
+
    return true;
-*/
 }                                              
                                                  
 function changeImageSize()
 {
-/*
-      var curImageSize = document.getElementBy("myImageId").getAttribute("width");
+
+  var curImageSize = document.getElementById("myImageId").getAttribute("width");
   
-  if(curImageSize == "475")
+  if (curImageSize == "475")
   {
       document.getElementById("myImageId").setAttribute("width", "125");
   }
   else
   {
     document.getElementById("myImageId").setAttribute("width", "475");
-    }
+    curImageSize = "125";
+  }
   
     return curImageSize;
-*/
+
   }
   
   </script>
@@ -56,12 +55,12 @@ function changeImageSize()
     </h2> 
  
   <img id="myImageId" 
-      onclick="rotateImage();"
+       onclick="rotateImage();"
        width="475" 
        alt="dockside river scene" 
        src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" />
-    <br />
-    <button id="MyButtonId" onclick="changeImageSize();">Change Size</button>
+  <br />
+  <button id="myButtonId" onclick="changeImageSize();">Change Size</button>
     
   </center>
   </body>
