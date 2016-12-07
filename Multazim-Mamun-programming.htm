@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html>
-  
 <head>
-
-<title>
-  Image Rotater And Resizer
-</title>
+ <title>
+   My Image Rotator Software Application
+ </title>
+ <script language="JavaScript">
+  // TODO add funcions here later
   
-<script>
-  // TODO we need to add the image click and button event logic here
+  function rotateImage()
+  {
+   var success = false;
+    
+   var curSrc = document.getElementBy("myImageId").getAttrib("src");
+    
+    if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
+    {
+        var url = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+        document.getElementById("myImageId").setAttrib("src", url);
+        success = true;
+  }
+   else
+   {
+     document.getElementById("myImageId").setAttrib("http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+     success = true;
+   }
+                                                    
+    return success;
+  }
+  
+  function changeImageSize()
+  {
+    var success = false;
+    
+    var curImageSize = document.getElementBy("myImageId").getAttrib("width");
+    
+    if (curImageSize == "475")
+    {
+      document.getElementById("myImageId").setAttrib("width", "125");
+      success = true;
+    }
+    else
+    {
+      document.getElementById("myImageId").setAttrib("width", "475");
+      success = true;
+    }
+    
+    return success;
+  }
+      
 </script>  
   
 </head>  
@@ -19,7 +58,7 @@
       Click the image to change it !
    </h2>
  
-  <img id="myimageId"
+  <img id="myImageId"
        width="475"
        alt="dockside river scene" 
        src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg"
