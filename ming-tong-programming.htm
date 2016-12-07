@@ -4,14 +4,14 @@
 <title>
     My Image Rotator Software Application
 </title>
-<script> language="JavaScript">
+<script language="JavaScript">
     //TODO add functions here later
         
  function rotateImage()
     {
         var success = false;
         
-        var curSrc = document.getElementBy("myImageId").getAttrib("src");
+        var curSrc = document.getElementById("myImageId").getAttrib("src");
         
         if(curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
      {
@@ -21,21 +21,22 @@
     }
     else
     {
-      document.getElementById("myImage").setAttrib("http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+      document.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
       success = true;
+    }
+
         return success;
-    }
-    }
+  }
     
     
     function changeImageSize()
     {
         var success = false;
-        var curImageSize = document.getElementBy("myImageId").getAttrib("width");
+        var curImageSize = document.getElementById("myImageId").getAttrib("width");
        
         if (curImageSize == "475")
         {
-            document.getElementById("myImageid").setAttrib("width", "125");
+            document.getElementById("myImageId").setAttrib("width", "125");
   success = true;
         }
          else
@@ -57,13 +58,13 @@
   <img 
        id="myImageId" 
        width="475" 
+       onclick="rotateImage();"
        alt="Charles riverfront" 
-       src="www.onclick.com/msis110/articles/community-boating-dock.jpg" />
+       src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" />
 <br />
                                                                 
 
-<button id="sizeButton" onclick=" changeImageSize();">
-  Change Size</button>
+<button id="sizeButtonId" onclick="changeImageSize();">Change Size</button>
     
     </center>
         </body>
