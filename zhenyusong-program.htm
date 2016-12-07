@@ -10,37 +10,47 @@
  function rotateImage()
         {     
         var success= false;
-          
-          var curSrc = document.getElementBy("myImageId").getAttrib("src");
-          
-          if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+
+        var curSrc = document.getElementById("myImageId").getAttrib("src");
+
+          if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
           {
-          var ur1 = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
-          document.getElementById("myImageId").setAttrib("src", url);
-          success = true;
+
+            var url = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+            document.getElementById("myImageId").setAttrib("src", url);
+            success = true;
           }
         else
         {
+
           document.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
-           success= true;
-              return success;
+          //success= true;
         }
+
+         return success;
   }
         
         
    function changeImageSize()
    {
-        var curImageSize = document.getElementBy("myImageId").getAttrib("width");
-          
+
+
+        var curImageSize = document.getElementById("myImageId").getAttrib("width");
+
           if (curImageSize == "475")
               {
-                 document.getlElementById("myImageId").setAttrib("width","125");
+
+                 document.getElementById("myImageId").setAttrib("width","125");
+
           success = true;
               }
               else
               {
-                 document.getlElementById("myImageId").setAttrib("width","475");
+
+                 document.getElementById("myImageId").setAttrib("width","475");
+
               }
+
               return success;
    }
     
@@ -54,7 +64,8 @@
     Click the image to change it !
     </h2>
     
-     <img id="myImageId" 
+     <img id="myImageId"
+         onclick="rotateImage();" 
          width="475" 
          alt="dockside river scene" 
          src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" 
