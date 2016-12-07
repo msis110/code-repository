@@ -7,8 +7,54 @@
     Image Rotator and Resizer
   </title>
    
-  <script>
-    //TODO need to add image click and event logic here
+  <script language="JavaScript">
+   function rotateImage()
+    
+    {
+    var success = false;
+       
+      
+    var curSrc = document.getElementBy("TheImage").getAttrib("src");
+    
+    if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
+        {
+          var url = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+          document.getElementById("TheImage").setAttrib("src", url);
+          success = true;
+        }
+        else
+        {
+          document.getElementById("TheImage").setAttrib("http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+          success = true;
+          
+        }
+    return success;
+      
+      
+    return success;
+    }
+    
+    function changeImageSize()
+    {
+    var success = false;
+      
+    var curImageSize = document.getElementBy("TheImage").getAttrib("width");
+    
+    if (curImageSize == "475")
+        {
+          document.getElementById("TheImage").setAttrib("width", "125");
+          success = true;
+        }
+        else
+        {
+          document.getElementById("TheImage").setAttrib("width", "475");
+          success = true;
+          
+        }
+    return success;
+      
+    }
+    
   </script>
    
  </head>
@@ -21,10 +67,13 @@
    </h1>
    <img id="TheImage" 
         width="475" 
+        onclick="rotateImage();"
         alt="boats city river" 
         src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" />
    
-   <button id="TheOnlyButtonOnTheWebsite">Change Size bruh!</button>
+   <button id="TheOnlyButtonOnTheWebsite" onclick="changeImageSize();">
+     Change Size bruh!
+   </button>
    
  </center>
  </body>
