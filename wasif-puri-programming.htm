@@ -6,45 +6,43 @@
  </title>
 
 <script language="JavaScript">
+
   function rotateImage()
   {
-    var success = false;
-    var curSrc = document.getElementBy("myImageId").getAttrib("src"); 
-   
+
+    var curSrc = document.getElementBy("myImageId").getAttribute("src"); 
+alert("here");
+/*   
    if (curSrc == "http//www.onclick.com/msis110/articles//community-boatting-dock.jpg")
    {
       var url = "http//www.onclick.com/msis110/articles/on-the-charles.jpg";
-      document.getElementById("myImageId").setAttrib("src", url);    
-      success = true
+      document.getElementById("myImageId").setAttribute("src", url);    
     }
    else
    {                                          
-      document.getElementById("myImageId).setAttrib("width", "475");
-      success = true;                                                                                            
+      document.getElementById("myImageId").setAttribute("src", "http//www.onclick.com/msis110/articles//community-boatting-dock.jpg");                                                                                            
     }                                                
   
-   return success;
-
+   return true;
+*/
 }                                              
                                                  
 function changeImageSize()
 {
-      var success = false;
-  
-      var curImageSize = document.getElementBy("myImageId").getAttrib("width");
+/*
+      var curImageSize = document.getElementBy("myImageId").getAttribute("width");
   
   if(curImageSize == "475")
   {
-      document.getElementById("myImageId").setAttrib("width", "125");
-      success = true;
+      document.getElementById("myImageId").setAttribute("width", "125");
   }
   else
   {
-    document.getElementById("myImageId").setAttrib("width", "475");
-    success = true;
+    document.getElementById("myImageId").setAttribute("width", "475");
     }
   
-    return success;
+    return curImageSize;
+*/
   }
   
   </script>
@@ -58,13 +56,13 @@ function changeImageSize()
     </h2> 
  
   <img id="myImageId" 
+      onclick="rotateImage();"
        width="475" 
        alt="dockside river scene" 
        src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" />
-    
-    <button id="MyButtonId">Change Size</button>
+    <br />
+    <button id="MyButtonId" onclick="changeImageSize();">Change Size</button>
     
   </center>
   </body>
-
 </html>
