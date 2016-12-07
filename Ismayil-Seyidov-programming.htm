@@ -11,21 +11,21 @@
  
    {
      var success = false;
-       
-     var curScr = document.getElementBy("myImageId").getAttrib("src");
+ 
+     var curScr = document.getElementById("myImageId").getAttrib("src");
      
      if(curScr == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
       { 
         var url = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
-         document.getElementById("myImageId").setAttrib ("src", url);
-        success=true:
+         document.getElementById("myImageId").setAttrib("src", url);
+        success=true;
       }
         else
       {
          document.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
-        success=true:
+        success=true;
       }
-    
+  
      return success;
    }
    
@@ -33,19 +33,21 @@
    {
      var success = false;
      
-     var curImageSize = document.getElementBy("myImageId").getAttrib("width");
-     
-     if(curImageSize == "475")
+     var curImageSize = document.getElementById("myImageId").getAttrib("width");
+
+     if (curImageSize == "475")
       {
-   document.getElementById("myImage").setAttrib ("width", "125");
-                           success=true:
+
+         document.getElementById("myImageId").setAttrib("width", "125");
+                           success=true;
       }
         else
       {
-         document.getElementById("myImage").setAttrib("width", "475");
-                           success=true:
+    
+         document.getElementById("myImageId").setAttrib("width", "475");
+                           success=true;
       }
-     
+
      return success;
    }
    
@@ -67,7 +69,7 @@
         src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" 
    /> 
    
-   <button id="myButtonId" onclick="rotateImage();">
+   <button id="myButtonId" onclick="changeImageSize();">
      Change image Size
    </button>
    
