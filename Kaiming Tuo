@@ -25,7 +25,7 @@
          src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" 
     />
     
-    <button id="btnButtonId"></button>
+    <button id="btnButtonId">Change Image Size</button>
     
     </center>
     </body>
