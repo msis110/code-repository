@@ -10,21 +10,21 @@
     function rotateImage()
       {
         var success = false;
-        
-       var curSrc ==document.getElementBy("myImageId").getAttrib("src");
-        
-        if (curSrc =="http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+
+       var curSrc = document.getElementById("myImageId").getAttrib("src");
+
+        if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
         {
           var url = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
           document.getElementById("myImageId").setAttrib("src", url);
-          success = true
+          success = true;
         }
         else
         {
-          document.getElementById("myImageId").setAttrib("http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+          document.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
           success = true;
         }
-        
+      
         return success;
       }
       
@@ -32,9 +32,9 @@
       {
         var success = false;
         
-        var curImageSize = document.getElementBy("myImageId"). getAttrib("width");
+        var curImageSize = document.getElementById("myImageId").getAttrib("width");
         
-        if(curImageSize =="475")
+        if (curImageSize =="475")
            {
            document.getElementById("myImageId").setAttrib("width", "125");
              success = true;
@@ -44,7 +44,7 @@
            document.getElementById("myImageId").setAttrib("width", "475");
              success = true;
            }
-        
+
         return success;
       }
     
@@ -59,11 +59,12 @@
     <img 
          id="myImageId" 
          width="475" 
+         onclick="rotateImage();"
          alt="dockside river scene" 
          src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg"
          />
     
-    <button id="btnButtonId" onClick="changeImageSize();">
+    <button id="btnButtonId" onclick="changeImageSize();">
     Change Image Size
     </button>        
   </center>
