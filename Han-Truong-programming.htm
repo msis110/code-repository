@@ -1,67 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
   <title>
-  My image Rotator Software Application
-</title> 
-  <script language="JavaScript">
-  // TODO we need to add the image click and button event logic here
-  
-  function rotateImage(){
-  var curSrc = document.getElementById("myImageId").getAttribute("src");
+    My Image Rotator Software Application
+  </title>
+  <script   language="JavaScript">
+    // TODO add functions here later
     
-    if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg"){
-        curSrc = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
-      }  
-        else {
-          curSrc = "http://www.onclick.com/msis110/articles/community-boating-dock.jpg";
-      }
+    
+    
+    function changeImageSize()
+    { 
+      var curWidth = document.getElementById('myImageId').getAttribute('width');
+      
+      if (curWidth =="450")
+      {          curWidth = "180";      }
+      else
+      {          curWidth = "450";      }   
+      
+      document.getElementById('myImageId').setAttribute("width", curWidth);
+      return curWidth; 
+    }
+    
+    
+    
+    function rotateImage()
+    {
+      var curSrc = document.getElementById('myImageId').getAttribute('src');
+      
+      if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
+      {          curSrc = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";      }
+      else
+      {          curSrc = "http://www.onclick.com/msis110/articles/community-boating-dock.jpg";      } 
       
       document.getElementById('myImageId').setAttribute("src", curSrc);
-      
-      return curSrc;
-      // comment
+      return curSrc; 
     }
-  
-  
-  function changeImageSize() {
-  var curWidth = document.getElementById( 'myImageId').getAttribute('width');
-   
-     if (curWidth == "475") {
-       (curWidth == "125";
     
-        }
-    else {
-       curWidth = "475";
-        }
-        
-  document.getElementById('myImageId').setAttribute("width", curWidth);  
-
-    }
-   
-    return curWidth;
-  }
-</script>
-  
+    
+    
+  </script>
+    
 </head>
- 
 <body>
-<center>
-<h2>
-  Click the image to change it !
-  </h2>
-
-<img id="myImageId" 
-     width="475" 
-     onclick="rotateImage();"
-     alt="dockside river scene" 
-     src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" 
- />
   
-<button id="sizeButtonId" onclick="changeImageSize();">
-        Change Image Size
+  <center>
+    
+  <h3>
+    Click the image to change it: 
+  </h3>
+    
+  <img id="myImageId" width="450" onclick="rotateImage();" alt="Charles riverfront" 
+         src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" />
+    
+  <button id="size-button" onclick="changeImageSize();">
+          Change Image Size    
   </button>
-</center>
-</body>
+    
+  </center>
   
+</body>
 </html>
