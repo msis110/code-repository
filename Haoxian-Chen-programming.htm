@@ -9,7 +9,7 @@
     
     function changeImageSize()
     {
-      var curWidth = document.getElemenById('myImageId').getAttrib('width');
+      var curWidth = document.getElementById('myImageId').getAttrib('width');
       
       if(curWidth == "475")
          {
@@ -23,20 +23,23 @@
       
           return curWidth;
     }
-    function rotateImage(){
-           var curSrc = document.getElemenById('myImageId').getAttrib('src');
+    function rotateImage()
+    {
+       var curSrc = document.getElementById('myImageId').getAttrib('src');
          
       if(curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
-         {curSrc ="http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+	{
+         curSrc ="http://www.onclick.com/msis110/articles/on-the-charles.jpg";
         
          }
          else
          {
            curSrc = "http://www.onclick.com/msis110/articles/community-boating-dock.jpg";
          }
-       document.getElemenById('myImageId').getAttrib("src",curSrc);
+       document.getElementById('myImageId').setAttrib("src",curSrc);
+
       return curSrc;
-      }
+    }
     
   </script>
 </head>
@@ -47,11 +50,11 @@
   <center>
   <img 
        id="myImageId"
+       onclick="rotateImage();"
        width="475"
        alt="Charles riverfront"
        src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" />
   
- 
   
   <button id="sizeButtonId" onclick="changeImageSize();">
      Change Image Size
