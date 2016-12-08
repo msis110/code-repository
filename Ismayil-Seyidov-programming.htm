@@ -2,27 +2,27 @@
 <html>
  <head>
   <title>
-    Iamge Rotator And Resizer
+   My Iamge Rotator Software Application 
    </title>
  <script language="JavaScript">
-       //TODO  we need to add the image click and button event logic here
+       // TODO  add functions here later
    
-   function rotateImage()
+   function changeImage() 
  
    {
      var success = false;
  
-     var curScr = document.getElementById("myImageId").getAttrib("src");
+     var curScr = document.getElementById("myImageId").getAttribute("src");
      
      if(curScr == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
       { 
         var url = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
-         document.getElementById("myImageId").setAttrib("src", url);
+         document.getElementById("myImageId").setAttribute("src", url);
         success=true;
       }
         else
       {
-         document.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+         document.getElementById("myImageId").setAttribute("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
         success=true;
       }
   
@@ -33,18 +33,18 @@
    {
      var success = false;
      
-     var curImageSize = document.getElementById("myImageId").getAttrib("width");
+     var curImageSize = document.getElementById("myImageId").getAttribute("width");
 
      if (curImageSize == "475")
       {
 
-         document.getElementById("myImageId").setAttrib("width", "125");
+         document.getElementById("myImageId").setAttribute("width", "125");
                            success=true;
       }
         else
       {
     
-         document.getElementById("myImageId").setAttrib("width", "475");
+         document.getElementById("myImageId").setAttribute("width", "475");
                            success=true;
       }
 
