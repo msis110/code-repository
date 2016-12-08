@@ -1,33 +1,70 @@
-<!DOCTYPE htm1>
-<htm1>
-  
-  <head>
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+    My Image Rotator Software Application
+</title>
+<script language="JavaScript">
+    //TODO add functions here later
+        
+ function rotateImage()
+    {
+        var success = false;
+        
+        var curSrc = document.getElementById("myImageId").getAttrib("src");
+        
+        if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
+     {
+           var url ="http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+           document.getElementById("myImageId").setAttrib("src", url);
+        success = true;
+    }
+    else
+    {
+      document.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+      success = true;
+    }
+        return success;
+  }
     
-    <title>
-      Image Rotator And Resizer
-      </title>
-  
-  <script>
-    // TOOO we need to add the image click and button event logic here
-    </script>
     
-    
+    function changeImageSize()
+    {
+        var success = false;
+        var curImageSize = document.getElementById("myImageId").getAttrib("width");
+       
+        if (curImageSize == "475")
+        {
+            document.getElementById("myImageId").setAttrib("width", "125");
+  success = true;
+        }
+         else
+         {    
+             document.getElementById("myImageId").setAttrib("width", "475");
+         } 
+           
+        return success;
+    }
+        
+  </script>
+  </head>
+<body>
+  <h2>
+    Click the image to change it :
+  </h2>
  
-  <body>
   <center>
-    <h2>
-    Click the image to change it !
-    </h2>
-    
-     <img id="myImageId" 
-         width="475" 
-         alt="dockside river scene" 
-         src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" 
-    />
-    
-    <button id="btnButtonId">Change Image Size</button>
+  <img 
+       id="myImageId" 
+       width="475" 
+       onclick="rotateImage();"
+       alt="Charles riverfront" 
+       src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" />
+<br />
+                                                                
+
+<button id="sizeButtonId" onclick="changeImageSize();">Change Size</button>
     
     </center>
-    </body>
-   
-  <htm1>
+        </body>
+          </html>
