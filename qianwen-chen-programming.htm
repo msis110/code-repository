@@ -8,14 +8,14 @@
    // TODO add functions here later 
     
   function resizeImage() {
-   var curWidth = document.getElementById("myImageId").getAttrib('width');
+   var curWidth = document.getElementById("myImageId").getAttribute('width');
   
     if (curWidth == "475") {
         curWidth = "125";
-        }
+    }
     else {
        curWidth = "475"; 
-        }
+    }
         
     document.getElementById('myImageId').setAtttribute("width", curWidth);
     
@@ -23,7 +23,7 @@
    }
    
    function rotateImage() {
-   var curSrc = document.getElementById("myImageId").getAttrib('src');
+   var curSrc = document.getElementById("myImageId").getAttribute('src');
      if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg") {
         curSrc = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
     }
