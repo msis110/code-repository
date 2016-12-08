@@ -1,76 +1,76 @@
-1 <!DOCTYPE html> 
-2 <html> 
-3 
-4 <head> 
-5 
-6 <!-- github.com msis110/code-repository c1058927@trbvn.com qwerty99 --> 
-7 <!-- https://github.com/msis110/code-repository --> 
-8 
-9 <title>Intro To Programming Andrew Hill - Images</title> 
-10 
-11 <script> 
-12  
-13 function changeImage() 
-14 { 
-15  
-16 //alert("You clicked the image !"); 
-17  
-18 	var current_src = document.getElementById("image-rotator").getAttribute("src"); 
-19 //alert(current_src); 
-20  
-21 	if(current_src == "http://www.visualitineraries.com/img/locations/17038.jpg") 
-22 	{ 
-23 		current_src = "http://luxoticworld.com/wp-content/uploads/2011/11/melati-beach-resort-samui-thailand.jpg"; 
-24 	} 
-25 	else 
-26 	{ 
-27 		current_src = "http://www.worldpropertyjournal.com/news-assets/Zemi-Beach-Resort-coastal-view.jpg"; 
-28 	} 
-29  
-30 	document.getElementById("image-rotator").setAttribute("src", current_src); 
-31  
-32 	return true; 
-33 } 
-34  
-35 function changeImageSize() 
-36 { 
-37 	// TODO get the width attribute value, if it is 475, set it to 100, else set it to 475 
-38  
-39 //alert("You want to change the image size !"); 
-40  
-41 	var current_width = document.getElementById("image-rotator").getAttribute("width"); 
-42 //alert(current_width); 
-43  
-44 	if(current_width == "475") 
-45 	{ 
-46 		current_width = "100"; 
-47 	} 
-48 	else 
-49 	{ 
-50 		current_width = "475"; 
-51 	} 
-52  
-53 	document.getElementById("image-rotator").setAttribute("width", current_width); 
-54  
-55 	return true; 
-56 } 
-57  
-58 </script> 
-59 
-60 </head> 
-61 
-62 <body> 
-63 
-64 <center> 
-65 <h1>Click the image to change it !</h1> 
-66 <p> 
-67 <img id="image-rotator" onclick="changeImage();" width="475"  
-68 	alt="Beach Club" src="http://www.visualitineraries.com/img/locations/17038.jpg"></img> 
-69 <br /> 
-70 <button id="size-button" onclick="changeImageSize();">Change Size</button> 
-71 </p> 
-72 </center> 
-73 
-74 </body> 
-75 
-76 </html> 
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<!-- github.com msis110/code-repository c1058927@trbvn.com qwerty99 -->
+<!-- https://github.com/msis110/code-repository -->
+
+<title>Intro To Programming - Images</title>
+
+<script>
+
+function changeImage()
+{
+
+//alert("You clicked the image !");
+
+	var current_src = document.getElementById("image-rotator").getAttribute("src");
+//alert(current_src);
+
+	if(current_src == "http://www.onclick.com/msis110/articles/on-the-charles.jpg")
+	{
+		current_src = "http://www.onclick.com/msis110/articles/community-boating-dock.jpg";
+	}
+	else
+	{
+		current_src = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+	}
+
+	document.getElementById("image-rotator").setAttribute("src", current_src);
+
+	return true;
+}
+
+function changeImageSize()
+{
+	// TODO get the width attribute value, if it is 475, set it to 100, else set it to 475
+
+//alert("You want to change the image size !");
+
+	var current_width = document.getElementById("image-rotator").getAttribute("width");
+//alert(current_width);
+
+	if(current_width == "475")
+	{
+		current_width = "100";
+	}
+	else
+	{
+		current_width = "475";
+	}
+
+	document.getElementById("image-rotator").setAttribute("width", current_width);
+
+	return true;
+}
+
+</script>
+
+</head>
+
+<body>
+
+<center>
+<h1>Click the image to change it !</h1>
+<p>
+<img id="image-rotator" onclick="changeImage();" width="475" 
+	alt="charles river photo" src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" />
+<br />
+<button id="size-button" onclick="changeImageSize();">Change Size</button>
+</p>
+</center>
+
+</body>
+
+</html>
