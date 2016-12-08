@@ -8,20 +8,20 @@
     // TODO we need to add the image click and button event logic here
     
     function rotateImage()
-      {
+    {
         var success = false;
 
-       var curSrc = document.getElementById("myImageId").getAttrib("src");
+       var curSrc = document.getElementById("myImageId").getAttribute("src");
 
         if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
         {
           var url = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
-          document.getElementById("myImageId").setAttrib("src", url);
+          document.getElementById("myImageId").setAttribute("src", url);
           success = true;
         }
         else
         {
-          document.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+          document.getElementById("myImageId").setAttribute("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
           success = true;
         }
       
@@ -32,16 +32,16 @@
       {
         var success = false;
         
-        var curImageSize = document.getElementById("myImageId").getAttrib("width");
+        var curImageSize = document.getElementById("myImageId").getAttribute("width");
         
         if (curImageSize =="475")
            {
-           document.getElementById("myImageId").setAttrib("width", "125");
+           document.getElementById("myImageId").setAttribute("width", "125");
              success = true;
            }
            else
            {
-           document.getElementById("myImageId").setAttrib("width", "475");
+           document.getElementById("myImageId").setAttribute("width", "475");
              success = true;
            }
 
