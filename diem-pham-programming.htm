@@ -11,14 +11,14 @@
     
     function changeImageSize()
     { 
-      var curWidth = document.getElementById('myImageId').getAttrib('width');
+      var curWidth = document.getElementById('myImageId').getAttribute('width');
       
       if (curWidth =="450")
       {          curWidth = "180";      }
       else
       {          curWidth = "450";      }   
       
-      document.getElementById('myImageId').setAttrib("width", curWidth);
+      document.getElementById('myImageId').setAttribute("width", curWidth);
       return curWidth; 
     }
     
@@ -26,14 +26,14 @@
     
     function rotateImage()
     {
-      var curSrc = document.getElementById('myImageId').getAttrib('src');
+      var curSrc = document.getElementById('myImageId').getAttribute('src');
       
       if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
       {          curSrc = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";      }
       else
       {          curSrc = "http://www.onclick.com/msis110/articles/community-boating-dock.jpg";      } 
       
-      document.getElementById('myImageId').setAttrib("src", curSrc);
+      document.getElementById('myImageId').setAttribute("src", curSrc);
       return curSrc; 
     }
     
