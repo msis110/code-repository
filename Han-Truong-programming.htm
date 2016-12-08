@@ -1,54 +1,45 @@
 <!DOCTYPE html>
 <html>
-  
-<head>
-  
-<title>
-  Image Rotator And Resizer
+  <head>
+  <title>
+  My image Rotator Software Application
 </title> 
-  
-<script language="JavaScript">
+  <script language="JavaScript">
   // TODO we need to add the image click and button event logic here
   
-  function rotateImage()
-  {
-   var success = false;
-    var curSrc = document.getElementById("myImageId").getAttrib("src");
+  function rotateImage(){
+  var curSrc = document.getElementById("myImageId").getAttribute("src");
     
-    if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
-    {
-      var url = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
-       document.getElementById("myImageId").setAttrib("src", url); 
-      success = true;
+    if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg"){
+        curSrc = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+      }  
+        else {
+          curSrc = "http://www.onclick.com/msis110/articles/community-boating-dock.jpg";
+      }
+      
+      document.getElementById('myImageId').setAttribute("src", curSrc);
+      
+      return curSrc;
+      // comment
     }
-    else
-    {
-       document.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
-      success = true;
-    }
-    
-    
-   return success;
-  }
   
-  function changeImageSize()
-  {
-   var success = false;
+  
+  function changeImageSize() {
+  var curWidth = document.getElementById( 'myImageId').getAttribute('width');
+   
+     if (curWidth == "475") {
+       (curWidth == "125";
     
-    var curImageSize = document.getElementById("myImageId").getAttrib("width");
-    
-    if (curImageSize == "475")
-    {
-       document.getElementById("myImageId").setAttrib("width", "125");  
-      success = true;
-    }
-    else
-    {
-       document.getElementById("myImageId").setAttrib("width", "475");  
-      success = true;
+        }
+    else {
+       curWidth = "475";
+        }
+        
+  document.getElementById('myImageId').setAttribute("width", curWidth);  
+
     }
    
-    return success;
+    return curWidth;
   }
 </script>
   
