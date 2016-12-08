@@ -20,10 +20,10 @@
     
     document.getElementById('myImageId').setAttrib("width", curWidth); 
     
-    return newwidth;
+    return curWidth;
    }
     
-   function rotaeImage() {
+   function rotateImage() {
     var curSrc = document.getElementById('myImageId').getAttrib('src');
     if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
     {
@@ -37,6 +37,7 @@
     
     
     return curSrc;
+}
    
   </script>
   </head>
@@ -48,6 +49,7 @@
     <center>
     <img
          id="myImageId" 
+	 onclick="rotateImage();"
          width="475"
          alt="Charles riverfront" 
          src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" 
@@ -55,6 +57,7 @@
     
     
         <button id="size-ButtonId" onclick="changeImageSize();">
+		Change Image Size
           </button>
     </center>
       </body>
