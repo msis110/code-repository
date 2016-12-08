@@ -7,7 +7,7 @@ My Image Rotator Software Application
 <script language="JavaScript">
   // TODO add Functions here later
   
-  function changeImageSize(width,height)
+  function changeImageSize()
   { 
     var curWidth =document.getElementById('myImageId').getAttribute('width');
     
@@ -22,7 +22,7 @@ My Image Rotator Software Application
         
     document.getElementById('myImageId').setAttribute("width",curWidth);
     
-    return newWidth;    
+    return curWidth;    
   }
   function rotateImage() {
     
