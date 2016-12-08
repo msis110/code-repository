@@ -8,7 +8,47 @@
     </title>
 
   <script>
-  // // TODO we need to add the image click and button event logic here
+  // // TODO we needfunction rotateImage()
+    function rotateImage()
+    {
+        var success = false;
+        
+        var curSrc = document.getElementById("myImageId").getAttrib("src");
+        
+        if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
+     {
+           var url ="http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+           document.getElementById("myImageId").setAttrib("src", url);
+        success = true;
+    }
+    else
+    {
+      document.getElementById("myImageId").setAttrib("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
+      success = true;
+    }
+
+        return success;
+  }
+    
+    
+    function resizeImage()
+    {
+        var success = false;
+        var curImageSize = document.getElementById("myImageId").getAttrib("width");
+       
+        if (curImageSize == "475")
+        {
+            document.getElementById("myImageId").setAttrib("width", "125");
+  success = true;
+        }
+         else
+         {    
+             document.getElementById("myImageId").setAttrib("width", "475");
+         } 
+           
+        return success;
+    }
+
   </script>
   
   </head>
@@ -20,12 +60,13 @@
       </h2>
       
     <img id="myImageId" 
-         width="475" 
+         width="475"
+         onclick="rotateImage();" 
          alt="dockside river scene" 
          src="http://www.onclick.com/msis110/articles/community-boating-dock.jpg" 
     />
       
-      <button id=""></button>
+      <button id="myButtonId" onclick="resizeImage();">Resize Image</button>
       
     </center>
   </body>
