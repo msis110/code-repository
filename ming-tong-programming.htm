@@ -9,23 +9,20 @@
         
  function rotateImage()
     {
-        var success = false;
-        
-        var curSrc = document.getElementById("myImageId").getAttribute("width");
-        
+       
+        var curSrc = document.getElementById("myImageId").getAttribute("src");
         if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
      {
-           var url ="http://www.onclick.com/msis110/articles/on-the-charles.jpg";
-           document.getElementById("myImageId").setAttribute("width", curwidth);
-        success = true;
+           var curSrc ="http://www.onclick.com/msis110/articles/on-the-charles.jpg";
+           document.getElementById("myImageId").setAttribute("src", curSrc);
+  
     }
     else
     {
       document.getElementById("myImageId").setAttribute("src", "http://www.onclick.com/msis110/articles/community-boating-dock.jpg");
-      success = true;
+    
     }
 
-        return success;
   }
     
     
