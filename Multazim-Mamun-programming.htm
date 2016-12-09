@@ -24,9 +24,8 @@
   
   function rotateImage() {
     var curSrc = document.getElementById("myImageId").getAttribute("src");
-    if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg"){
-     curSrc = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
-    }
+    if (curSrc == "http://www.onclick.com/msis110/articles/community-boating-dock.jpg")
+    {
         var url = "http://www.onclick.com/msis110/articles/on-the-charles.jpg";
         document.getElementById("myImageId").setAttribute("src", url);
         success = true;
