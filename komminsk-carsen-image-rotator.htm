@@ -26,24 +26,19 @@
         
 	function changeImageWidth()
      	{
-		alert('1');
 		// get the image width attribute value
             	// if it is 475 pixels, set it to 100 pixels
             	// else set it to 475 pixels
 	   	var image_width=document.getElementById("image-id").style.width;
 	   	if (image_width=="475px")
 	   	{
-			alert('2');
 			image_width="100px";
 	   	}
 	   	else
 	   	{
-			alert('3');
 			image_width="475px";
 	   	}
-		alert('4');
 	   	document.getElementById("image-id").style.width=image_width;
-	   	alert('5');
 		return true;
            }  
 	    
