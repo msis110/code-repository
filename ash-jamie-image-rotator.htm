@@ -11,15 +11,15 @@
       function changeImageSource()
       {
         // checks and changes the image source
-        var image_src=document.getElementById("image-id").getAtrribute("src");
-        if (image_src=="http://onclick.com/msis110/articles/on-the-charles.jpg")
-        {
+              var image_src=document.getElementById("image-id").getAtrribute("src");
+              if (image_src=="http://onclick.com/msis110/articles/on-the-charles.jpg")
+              {
       image_src="http://onclick.com/msis110/articles/community-boating-dock.jpg";
-        }
-        else
-        {
+              }
+              else
+              {
       image_src="http://onclick.com/msis110/articles/on-the-charles.jpg";
-        }
+              }
         document.getElementById("image-id").setAttribute("src", image_src);
         return true;
       }
