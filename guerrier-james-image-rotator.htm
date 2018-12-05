@@ -8,15 +8,33 @@
                         My Image Rotator Webpage
             </title>
             <script>
-                    <!--This section to be used for java script-->
-            </script>             
+                    //This section to be used to add JavaScript functions next week
+                     function changeImageSource()
+                     {	
+                              // checks and changes the image source
+	                        var image_src=document.getElementById("image-id").getAttribute("src");
+	
+                              if (image_src=="http://onclick.com/msis110/articles/on-the-charles.jpg")
+	                        {
+                                       image_src="http://onclick.com/msis110/articles/community-boating-dock.jpg";
+	                        }
+	                        else
+	                        {
+                                       image_src="http://onclick.com/msis110/articles/on-the-charles.jpg";
+                        	}
+	                       
+                           document.getElementById("image-id").setAttribute("src", image_src);
+	                        
+                           return true;
+                      }
+              </script>             
       </head>
       <body>
             <center>
                    <h1>
                          Click the image to change it !
                   </h1>
-            </center>
+                  <br/>
      
       </body>
  </html>
