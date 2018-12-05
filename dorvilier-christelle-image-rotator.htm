@@ -8,7 +8,29 @@
                         My Image Rotator Webpage
                 </title>  
                 <script>
-                        <!-- This section to be used to add JavaScript functions next week -->  
+                        // This section to be used to add JavaScript functions next week 
+                       function changeImageSourceDorvilier()
+                       {	
+                       // checks and changes the image source
+	                var image src = document.getElementById(“image-id”).getAttribute(“src”);
+
+	                if
+                       (image_src==”http://onclick.com/msis110/articles/on-the-charles.jpg”)
+                       {
+                       image_src=”http://onclick.com/msis110/articles/community-boating-dock.jpg”;
+
+                       }
+                       else
+                       {
+	                image_src=”http://onclick.com/mis110/articles/on-the-chaarles.jpg”;
+                       }
+
+                       document.getElementById(“image-id”).setAttribute(“src”,image_src);
+	
+                       return true;
+
+                       }
+
                 </script> 
        </head>    
        <body>
@@ -19,11 +41,11 @@
                      <img 
                             id="image-id" 
                             style="width:475px;" 
-                            onclick="changeImageSource();"  
+                            onclick="changeImageSourcedorvilier();"  
                             alt="Charles river photo"
                             src="http://onclick.com/msis110/articles/community-boating-dock.jpg">
                     <br />
-                    <button id="image-width-button" onclick="changeImageWidth();">
+                    <button id="image-width-button" onclick="changeImageWidthdorvilier();">
                                   Change Image Width
                     </button>
 
