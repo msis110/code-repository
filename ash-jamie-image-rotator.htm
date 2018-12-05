@@ -23,11 +23,12 @@
         document.getElementById("image-id").setAttribute("src", image_src);
         return true;
       }
+      
       function changeImageWidthAsh()
       {
           // get the image width attribute value
-        // if it is 475 pixels, set it to 100 pixels
-        //else set it to 475 pixels 
+          // if it is 475 pixels, set it to 100 pixels
+          //else set it to 475 pixels 
               var image_width=document.getElementById("image-id").style.width;
               if (image_width=="475px")
               {
@@ -50,11 +51,11 @@
             <img
            id="image-id"
            style="width:475px;"
-           onclick="changeImageSource();"
+           onclick="changeImageSourceAsh();"
            alt="Charles River photo"
            src="http://onclick.com/msis110/articles/community-boating-dock.jpg" >
       <br />
-      <button id="image-width-button" onclick="changeImageWidth();">
+      <button id="image-width-button" onclick="changeImageWidthAsh();">
         Change Image Width
       </button>
     </center>
