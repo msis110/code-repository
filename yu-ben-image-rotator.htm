@@ -8,11 +8,11 @@
                    My Image Rotator Webpage
             </title>
             <script>
-                  function changeImageSource26()
-                  {	
-                   // checks and changes the image source
-	             var image_src=document.getElementById("image-id").getAttribute("src");
-	             if (image_src=="http://onclick.com/msis110/articles/on-the-charles.jpg")
+function changeImageSource26()
+{	
+// checks and changes the image source
+	var image_src=document.getElementById("image-id").getAttribute("src");
+	if (image_src=="http://onclick.com/msis110/articles/on-the-charles.jpg")
 	{
 image_src="http://onclick.com/msis110/articles/community-boating-dock.jpg";
 	}
@@ -23,8 +23,7 @@ image_src="http://onclick.com/msis110/articles/on-the-charles.jpg";
 	document.getElementById("image-id").setAttribute("src", image_src);
 	return true;
 }
-                  function changeImageWidth26()
-{
+		    {
 	// get the image width attribute value
 // if it is 475 pixels, set it to 100 pixels
 // else set it to 475 pixels
@@ -38,6 +37,8 @@ image_src="http://onclick.com/msis110/articles/on-the-charles.jpg";
 		image_width="475px";
 	}
 	document.getElementById("image-id").style.width=image_width;
+	return true;
+}
             </script>
       </head>
       <body>
