@@ -8,21 +8,36 @@
       <b>  My Image Rotator Page  </b>
     </title>
           <script>
-              <!-- This section is to be used to add JavaScript functions next week -->
-        
-        </script>
+function changeImageWidthRosata ()
+            {
+              //get the image width attribute value
+              // if it is 475 pixels, set it to 100 pixels
+              // else set it to 475 pixels
+              var image_width=document.getElementById("image-id").style.width;
+              if (image_width=="475px")
+              {
+                image_width="100px";
+              }
+              else
+              {
+                image_width="475";
+              }
+              document.getElementById("image-id").style.width=image_width;
+              return true;
+            }
+    </script>
   </head>
   <body>
     <center>
               <h1>
                <u> Click on the image to change it! </u>
               </h1>
-       <img
-  id="image-id" 
-  style="width:475px;" 
-  onclick="changeImageSource();"  
-  alt="Charles river photo"
-  src="http://onclick.com/msis110/articles/community-boating-dock.jpg">
+         <img
+          id="image-id" 
+           style="width:475px;" 
+            onclick="changeImageSource();"  
+             alt="Charles river photo"
+            src="http://onclick.com/msis110/articles/community-boating-dock.jpg">
       <br/>
         <button id="image-width-button" onclick="changeImageWidth();">
           Change Image Width
