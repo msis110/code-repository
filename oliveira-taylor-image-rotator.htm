@@ -23,6 +23,23 @@
     document.getElementById("image-id").setAttribute("src,image-src");
     return true; 
     }
+    function changeImageWidth ()
+    {
+      // get the image width attribute value
+      // if it is 475 pixles, set it too 100 pixles
+      // else set it to 475 pixles
+      var image_width=document.getElementById("image-id").style.width;
+      if (image_width=="475px")
+      {
+        image_width="100px";
+      }
+      else
+      {
+        image_width="475px";
+      }
+      document.getElementById("image-id").style.width=image_width;
+      return true;
+    }
   </script>
    </body>
     <center> 
