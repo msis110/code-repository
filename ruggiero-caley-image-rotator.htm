@@ -8,7 +8,7 @@
   My Image Rotator Webpage
 </title>
     <script>
-      function changeImageSoure()
+      function changeImageSourceRuggiero()
       {
         // checks and changes the image source 
         var image_src=document.getElementById("image-id").getAttribute("src");
@@ -23,7 +23,7 @@ image_src="http://onclick.com/msis110/articles/on-the-charles.jpg";
 	document.getElementById("image-id").setAttribute("src", image_src);
 	return true;
 }
-      function changeImageWidth17()
+      function changeImageWidthRuggiero()
 {
 	// get the image width attribute value
 // if it is 475 pixels, set it to 100 pixels
@@ -49,11 +49,11 @@ image_src="http://onclick.com/msis110/articles/on-the-charles.jpg";
       <img
            id="image-id"
            style="width:475px;"
-           onclick="changeImageSource();"
+           onclick="changeImageSourceRuggiero();"
            alt="Charles River photo"
            src="http://onclick.com/msis110/articles/community-boating=dock.jpg" >
       <br />
-      <button id="image-width-button" onclick="changeImageWidth();">
+      <button id="image-width-button" onclick="changeImageWidthRuggiero();">
         Change Image Width 
       </button>
     </center>
