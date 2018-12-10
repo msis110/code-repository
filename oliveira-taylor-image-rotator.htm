@@ -9,9 +9,9 @@
   </title>
   </head>
   <script>
-    function changeimagesource()
+    function changeimagesourceOliveira()
     {
-      checks and changes the image source
+      //checks and changes the image source
       var image_src=document.GetElementById("image-id").getAttribute("src");
       if (image_src=="http://onclick.com/msis110/articles/on-the-charles.jpg")
       {
@@ -23,7 +23,7 @@
     document.getElementById("image-id").setAttribute("src,image-src");
     return true; 
     }
-    function changeImageWidth ()
+    function changeImageWidthOlliveira()
     {
       // get the image width attribute value
       // if it is 475 pixles, set it too 100 pixles
@@ -49,12 +49,12 @@
       <img
            id="image-id"
            style=width"475px;"
-           onclick="changeImageSource();"
+           onclick="changeImageSourceOliveira();"
            alt="Charles river photo"
            src="http://onclick/com/msis110/articles/community-boating-dock.jpg">
       <br/>
       <button id="image-width-button"boating
- onclick="ChangeImageWidth();">
+ onclick="ChangeImageWidthOliveira();">
         Change Image Width
       </button>
     </center>
