@@ -1,73 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- Created on April 14 27 2019 by George Kelley -->
+		<!-- Created [PUT TODAY'S DATE HERE] by [PUT YOUR NAME HERE] -->
 		<!-- To edit go to https://github.com/msis110/code-repository/ -->
 		<!-- Login as c1058927@trbvn.com with password Msis110Fall2019 -->
 		<title>
 			My Image Rotator Webpage
 		</title>
 		<script>
-			// This section to be used to add JavaScript functions next week
-			function changeImageSourceKelley()
-			{	
-				// checks and changes the image source
-				var image_src = document.getElementById("image-id").getAttribute("src");
-				
-				if (image_src=="http://onclick.com/msis110/articles/on-the-charles.jpg")
-				{
-					image_src="http://onclick.com/msis110/articles/community-boating-dock.jpg";
-				} 	
-				else
-				{
-					image_src="http://onclick.com/msis110/articles/on-the-charles.jpg";
-				}
-
-				document.getElementById("image-id").setAttribute("src", image_src);
-			
-				return true;
-			}
-			
-			function changeImageWidthKelley()
-			{
-				// get the image width attribute value
-				// if it is 475 pixels, set it to 100 pixels
-				// else set it to 475 pixels
-
-				var image_width = document.getElementById("image-id").style.width;
-
-				if (image_width=="475px")
-				{
-					image_width="100px";
-				}
-				else
-				{
-					image_width="475px";
-				}
-
-				document.getElementById("image-id").style.width = image_width;
-				
-				return true;
-			}
-			
+			// Put your Javascript functions here
 		</script>
 	</head>
 	<body>
-		<center>
-			<h1>
-				Click the image to change it !
-			</h1>
-			<br />
-			<img 
-			  	id="image-id" 
-  				style="width:475px;" 
-  				onclick="changeImageSourceKelley();"  
-  				alt="Charles river photo"
-  				src="http://onclick.com/msis110/articles/community-boating-dock.jpg">
-			<br />
-			<button id="image-width-button" onclick="changeImageWidthKelley();">
-			          Change Image Width
-        		</button>
-		</center>
+		<!-- Put your HTML tags here -->
 	</body>
 </html>
