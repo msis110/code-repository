@@ -8,11 +8,22 @@
 			My Image Rotator Webpage
 		</title>
 		<script>
-			// Put your Javascript functions here
+			
+			function changeImageWidthSlayman(newWidth)
+			{
+				document.getElementById('image-id').setAttribute('width', newWidth); 
+				return true;
+			}
+			
 		</script>
 	</head>
 	<body>
-		<!-- Put your HTML tags here -->
+		<center>
+			<h1>
+				Click the image to change it!
+			</h1>
+				<br />
+
 		<center>
 		<p style="font-size:48pt;color:pink;">
 		  Click the image to change it and<br />Click the button to resize the image
@@ -26,7 +37,7 @@
 		     width="500"></img>
 		
 		<!--put button html here-->
-	<button onclick="alert('TODO change the image size');">
+	<button onclick="changeImageWidthSlayman('250');">
 		 Click me to resize the image
 		 </button>
 	</body>
