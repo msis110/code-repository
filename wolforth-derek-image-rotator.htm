@@ -7,8 +7,12 @@
 		<title>
 			My Image Rotator Webpage
 		</title>
-		<script>
-			// Put your Javascript functions here
+		<script language="javascript">
+			function changeimagewidthwolforth(newwidth)
+			{
+				document.getElementById('image-id').setAttribute('width',newwidth);
+				return true;
+			}
 		</script>
 	</head>
 	<body>
@@ -23,7 +27,7 @@
 		     src="http://onclick.com/msis110/articles/community-boating-dock.jpg" 
 		     width="500">
 		</img>
-	<button onclick="alert('TODO CHNAGE IMAGE SIZE");">
+	<button onclick="changeimagewidthwolforth('250');">
 		Click me to resize the image
 	</button>
 	</body>
