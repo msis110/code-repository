@@ -7,7 +7,14 @@
 		<title>
 			My Image Rotator Webpage
 		</title>
-	</head>
+		<script language="javascript">>
+			function chageimagewidthKim(newwidth)
+			{
+				document.getElementById('image-id').setAttribute('width', newWidth);
+				return true;
+			}	
+		</script>
+        </head>
 	<body>
 	  <center>
 	    <h1>
@@ -15,12 +22,12 @@
 	    </h1>	
 		  <img
 		 id="image-id" 
-                 style="width:475px;" 
+                 width="475"
                  onclick="changeImageSource();"  
                  alt="Charles river photo"
                  src="http://onclick.com/msis110/articles/community-boating-dock.jpg">
             <br />
-            <button id="image-width-button" onclick="changeImageWidth();">
+            <button id="image-width-button" onclick="changeImageWidth('250');">
               Change Image Width
             </button>
 	  </center>  
