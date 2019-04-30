@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- Created [April 30,2019] by [Hebe] -->
+		<!-- Created [April 30 2019] by [Hebe] -->
 		<!-- To edit go to https://github.com/msis110/code-repository/ -->
 		<!-- Login as c1058927@trbvn.com with password Msis110Fall2019 -->
 		<title>
 			My Image Rotator Webpage
 		</title>
-		<script>
-			// Put your Javascript functions here
+		<script language="javascript">
+			
+			function changeImageWidthHebe(newwidth)
+			{
+				document.getElementById('image-id').setAttribute('width',newWidth
+				return true;
+			}
+			
+			
+			
+			
 		</script>
 	</head>
 	<body>
-		<!-- Put your HTML tags here -->
+		<center>
+			<h1>
+				Clikc the image to change it !
+			</h1>
+			<img
+			     id="image-id"
+			     style="width:475px;"
+			     alt="Charles river photo"
+			     src="http://onclick.com/msis110/articles/community-boating-dock.jpg">
+			<br />
+			<button id="image-width-button" onclick="changeImageWidth();">
+				Change Image Width
+			</button>
+
+			
 	</body>
 </html>
