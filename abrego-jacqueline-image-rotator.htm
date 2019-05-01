@@ -7,15 +7,13 @@
 		<title>
 			My Image Rotator Webpage
 		</title>
-	 <script language =javascript">
+	 <script>
 	function changeImageWidthAbrego(newWidth)
 	{
-	      	document.getElementById('image-id').setAttribute('width', newWidth);
+    	alert('abrego2');
+	    document.getElementById('image-id').setAttribute('width', newWidth);
 		return true;			      
-        }
-		 
-	
-
+    }
 	</script>
 	</head>
 	<body>
@@ -25,13 +23,13 @@
 			</h1>
 			<img
 			     id="image-id"
-		             width="500"
-			     onclick="changeImageSourceAbrego();"
+		         width="400"
+			     onclick="alert('hi');"
 			     alt="Charles River photo"
-			     src="http://onclick.com/msis110/articles/community-boating-dock.jpg"
+			     src="http://onclick.com/msis110/articles/community-boating-dock.jpg">
 			     <br />
 			<button id="image-width-button" onclick="changeImageWidthAbrego('250');">
-				Change Image Width
+				Change Image Width 3
 			</button>
 		</center>
 	</body>
