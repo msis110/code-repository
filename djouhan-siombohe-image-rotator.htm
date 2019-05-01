@@ -8,29 +8,30 @@
 		<title>
 			My Image Rotator Webpage
 		</title>
-		<script>
-			// Put your Javascript functions here
+		<script language ="java script">
+			function changeImageDjouhan(newWidth)
+			{
+				document.getElementById('image-id').setAttribute('width',  newWidth);
+				retrurn true;
+			}
 		</script>
 	</head>
 	<body>
-		<!-- Put your text header here -->
-		<center>
-		<p style="font-size:48pt;color:yellow;">
-			click the image to change it and
-			<br/>
-			click the button to resize the image
-		</p>
-		</center>
-			
-		<!-- Put your image tag here -->
-		<img id="image-id"
-		     alt="This is an image of the charles River"
-		     scr="http://onclick. com/msis110/articles/community-boating-dock.jpg"
-		     width="500"></img>
-			
-		<!-- Put your button tag here -->
-		<button onclick="alert('TODO change the image size');">
-			click me to resize the image
+		center
+		<h1>
+		     click the image to change it !
+		</h1>
+		<br />
+		
+		<img
+		     id="image-id"
+		     width="475"
+		     onclick="changeImageSourceDjouhan();"
+		     alt="Charles River photo"
+		     src="http://onclick. com/msis110/articles/community-boating-dock.jpg">
+		<br />
+		<button id="image-width-button" onclick="changeImageDjouhan('250');">
+			change image width
 		</button>
 	</body>
 <html>
