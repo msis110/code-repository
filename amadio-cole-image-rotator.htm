@@ -10,9 +10,9 @@
 		<script>
 			function changeImageSource()
 			{
-  
+
 				// checks and changes the image source
-				var image_src = document.getElementById('image-id").getAttribute("src");
+				var image_src = document.getElementById("image-id").getAttribute("src");
 				if (image_src == "http://onclick.com/msis110/articles/on-the-charles.jpg")
 				{
 					image_src = "http://onclick.com/msis110/articles/community-boating-dock.jpg";
@@ -21,6 +21,7 @@
 				{
 					image_src = "http://onclick.com/msis110/articles/on-the-charles.jpg";
 				}
+  
 				document.getElementById("image-id").setAttribute("src", image_src);
 				return true;
 			}
@@ -41,6 +42,7 @@
 				}
 				
 				document.getElementById("image-id").style.width = image_width; 
+          
 				return true;
 			}
 		</script>
