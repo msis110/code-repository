@@ -9,8 +9,22 @@
 		</title>
 		<script language="javascript">
 			function changeimagewidthwolforth(newwidth)
+			
+				return true;
+			}
+			function changeimagesourcewolforth()
 			{
-				document.getElementById('image-id').setAttribute('width',newwidth);
+				var curSrc = =document.getElementById('image-id').getAttribute('src');
+				if (curSrc == "http://onclick.com/msis110/articles/community-boating-dock.jpg")
+				{
+					curSrc="http://onclick.com/msis110/articles/on-the-charles.jpg"
+				}
+				else
+				{
+					curSrc="http://onclick.com/msis110/articles/community-boating-dock.jpg";
+					
+				}
+				 document.getElementbyId('image-id').setAttribute('src', curSrc);
 				return true;
 			}
 		</script>
