@@ -8,11 +8,35 @@
 			My Image Rotator Webpage
 		</title>
 		<script language="javascript">
-			function changeImageWidthDjouhan(newWidth)
+			function changeImageSourceDjouhan()
 			{
-				document.getElementById('image-id').setAttribute('width',  newWidth);
-				return true;
+      var curSrc= document.getElementById('image-id').getAttribute('src');
+           if (curSrc == "http://onclick.com/msis110/articles/community-boating-dock.jpg")
+           {
+           curSrc= "http://onclick.com/msis110/articles/on-the-charles.jpg";
+           }
+           else
+           {
+           curSrc="http://onclick.com/msis110/articles/community-boating-dock.jpg";
+           }
+          document.getElementById('image-id').setAttribute('src', curSrc);
+           return true; 
 			}
+            
+            function changeImageWidthDjouhan()
+            {
+var curWidth=document.getElementById('image-id').getAttribute('width');
+           if (curWidth == "500")
+           {
+	           curWidth= "150";
+           }
+           else
+           {
+    	       curWidth="500";
+           }
+  document.getElementById('image-id').setAttribute('width', curWidth);
+           return true; 
+            }
 		</script>
 	</head>
 	<body>
@@ -21,16 +45,17 @@
 		     click the image to change it !
 		</h1>
 		<br />
-		<img
+			<p></p>
+			<img
 		     id="image-id"
 		     width="475"
 		     onclick="changeImageSourceDjouhan();"
 		     alt="Charles River photo"
 		     src="http://onclick.com/msis110/articles/community-boating-dock.jpg">
 		<br />
-		<button id="image-width-button" onclick="changeImageWidthDjouhan('250');">
+		<button id="image-width-button" onclick="changeImageWidthDjouhan();">
 			change image width
 		</button> 
 		</center>
 	</body>
-<html>
+</html>
