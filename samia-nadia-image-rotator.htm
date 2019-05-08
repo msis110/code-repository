@@ -7,12 +7,44 @@
 		<title>
 			My Image Rotator Webpage
 		</title>
-		<script language="javascript">
-			
-			function changeImageWidthSamia(newWidth)
+			<script language="javascript">
+			function changeImageSourceSamia()
 			{
-				document.getElementById('image-id').setAttribute('width', newWidth);
-				return true;
+        
+			var curSrc = document.getElementById('image-id').getAttribute('src');
+        
+		if (curSrc == "http://onclick.com/msis110/articles/community-boating-dock.jpg")
+			{
+					curSrc = "http://onclick.com/msis110/articles/on-the-charles.jpg"
+			}
+			else
+			{
+				curSrc = "http://onclick.com/msis110/articles/community-boating-dock.jpg";
+			}
+		
+		document.getElementById('image-id').setAttribute('src', curSrc);
+					
+			return true;
+			}
+				
+			function changeImageWidthSamia()
+			{
+          
+	var curWidth = document.getElementById('image-id').getAttribute('width');
+       
+           
+			if (curWidth == "500")
+			{
+				curWidth = "150";
+			}
+			else
+			{
+				curWidth = "500";
+			}
+      
+			document.getElementById('image-id').setAttribute('width', curWidth);
+			
+            return true;
 			}
 			
 		</script>
@@ -25,12 +57,13 @@
 			<br/>
 			<img
 				id="image-id"
-			     	width="475"
+			     	width="500"
 			     	onclick="changeImageSourceSamia();"
 		   		alt="Charles River photo"
 		    		src="http://onclick.com/msis110/articles/community-boating-dock.jpg" 
+			</img>
 			<br />
-			<button id="image-width-button" onclick="changeImageWidthSamia('250');">
+			<button id="image-width-button" onclick="changeImageWidthSamia();">
 				Change Image Width
 			</button>
 	</body>
