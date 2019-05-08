@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- Created [PUT TODAY'S DATE HERE] by [PUT YOUR NAME HERE] -->
+		<!-- Created [4/23/2019] by [Stephanie Slayman] -->
 		<!-- To edit go to https://github.com/msis110/code-repository/ -->
 		<!-- Login as c1058927@trbvn.com with password Msis110Fall2019 -->
 		<title>
 			My Image Rotator Webpage
 		</title>
-		<script>
-			
-			function changeImageWidthSlayman(newWidth)
+			<script language="javascript">
+			function changeImageSourceSlayman()
 			{
-				document.getElementById('image-id').setAttribute('width', newWidth); 
+				var curSrc = document.getElementById('image-id').getAttribute('src');
+				if (curSrc == "http://onclick.com/msis110/articles/community-boating-dock.jpg")
+			{
+					curSrc = "http://onclick.com/msis110/articles/on-the-charles.jpg"
+			}
+			else
+			{
+				curSrc = "http://onclick.com/msis110/articles/community-boating-dock.jpg";
+			}
+			
+			document.getElementById('image-id').setAttribute('src', curSrc);
+					
+			return true;
+			}
+				
+			function changeImageWidthSlayman()
+			{
+            
+            var curWidth = document.getElementById('image-id').getAttribute('width');
+			if (curWidth == "500")
+			{
+					curWidth = "150"
+			}
+			else
+			{
+					curWidth = "500";
+			}
+				document.getElementById('image-id').setAttribute('width', curWidth);
 				return true;
 			}
 			
@@ -20,26 +46,20 @@
 	<body>
 		<center>
 			<h1>
+            <p style="font-size:46pt;color:pink;">
 				Click the image to change it!
 			</h1>
-				<br />
-
-		<center>
-		<p style="font-size:48pt;color:pink;">
-		  Click the image to change it and<br />Click the button to resize the image
-		</p>
-		</center>
-			
-		<!--put image html text here-->
-		<img id="image-id" 
-		     alt="This an image of the 	Charles River" 
-		     src="http://onclick.com/msis110/articles/community-boating-dock.jpg" 
-		     width="500"></img>
-		
-		<!--put button html here-->
-	<button onclick="changeImageWidthSlayman('250');">
-		 Click me to resize the image
-		 </button>
+			<br/>
+			<img
+				id="image-id"
+			     	width="500"
+			     	onclick="changeImageSourceSlayman();"
+		   		alt="Charles River photo"
+		    		src="http://onclick.com/msis110/articles/community-boating-dock.jpg" 
+			</img>
+			<br />
+			<button id="image-width-button" onclick="changeImageWidthSlayman('250');">
+				Change Image Width
+			</button>
 	</body>
-
 </html>
