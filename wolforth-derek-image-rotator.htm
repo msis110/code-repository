@@ -27,7 +27,15 @@ return true;
 
 function changeImageWidthWolforth(newWidth)
 {
-document.getElementById('image-id').setAttribute('width', newWidth);
+document.getElementById('image-id').getAttribute('width');
+       if(curWidth == "500")
+       {
+              curWidth = ="150";
+       }
+       else
+       {
+              curWidth = "500";
+       }
 return true;
 }
 
