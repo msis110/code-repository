@@ -11,31 +11,36 @@ My Image Rotator Webpage
 function changeImageSourceWolforth()
 {
 var curSrc = document.getElementById('image-id').getAttribute('src');
+
 if (curSrc == "http://onclick.com/msis110/articles/community-boating-dock.jpg")
 {
-curSrc = "http://onclick.com/msis110/articles/on-the-charles.jpg"
+curSrc = "http://onclick.com/msis110/articles/on-the-charles.jpg";
 }
 else
 {
 curSrc = "http://onclick.com/msis110/articles/community-boating-dock.jpg";
 }
 
-document.getElementById('image-id').setAttribute('src', curSrc);
+document.getElementById('image-id').setAttribute('src', curSrc)
 
 return true;
 }
 
 function changeImageWidthWolforth(newWidth)
 {
-document.getElementById('image-id').getAttribute('width');
+	var curWidth = document.getElementById('image-id').getAttribute('width');
+
        if(curWidth == "500")
        {
-              curWidth = ="150";
+              curWidth = "150";
        }
        else
        {
               curWidth = "500";
        }
+
+document.getElementById('image-id').setAttribute('width', curWidth);
+
 return true;
 }
 
@@ -49,13 +54,13 @@ Click the image to change it!
 <br/>
 <img
 id="image-id"
-       width="475"
+       width="500"
        onclick="changeImageSourceWolforth();"
      alt="Charles River photo"
     src="http://onclick.com/msis110/articles/community-boating-dock.jpg" 
 </img>
 <br />
-<button id="image-width-button" onclick="changeImageWidthWolforth('250');">
+<button id="image-width-button" onclick="changeImageWidthWolforth();">
 Change Image Width
 </button>
 </body>
