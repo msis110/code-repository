@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!-- Created [4/23/19] by [Derek Wolforth] -->
-		<!-- To edit go to https://github.com/msis110/code-repository/ -->
-		<!-- Login as c1058927@trbvn.com with password Msis110Fall2019 -->
-		<title>
-			My Image Rotator Webpage
-		</title>
-		<script language="javascript">
-			function changeimagewidthwolforth(newwidth)
-			
-				return true;
-			}
-			function changeimagesourcewolforth()
-			{
-				var curSrc = =document.getElementById('image-id').getAttribute('src');
-				if (curSrc == "http://onclick.com/msis110/articles/community-boating-dock.jpg")
-				{
-					curSrc="http://onclick.com/msis110/articles/on-the-charles.jpg"
-				}
-				else
-				{
-					curSrc="http://onclick.com/msis110/articles/community-boating-dock.jpg";
-					
-				}
-				 document.getElementbyId('image-id').setAttribute('src', curSrc);
-				return true;
-			}
-		</script>
-	</head>
-	<body>
-		<!-- Put your HTML tags here -->
-		<center>
-		<p style="font-size:48pt;color:blue;">
-		Click the Image to change it and <br /> click the button to resize the image
-		</p>
-		
-		<img id="image-id"
-		     onclick="changeimagesourcewolforth()"
-		     alt="this is an image of the Charles River"
-		     src="http://onclick.com/msis110/articles/community-boating-dock.jpg" 
-		     width="500">
-		</img>
-	<button onclick="changeimagewidthwolforth('250');">
-		Click me to resize the image
-	</button>
-		</Center>
-	</body>
+<head>
+<!-- Created [4/30/2019] by [Derek Wolforth] -->
+<!-- To edit go to https://github.com/msis110/code-repository/ -->
+<!-- Login as c1058927@trbvn.com with password Msis110Fall2019 -->
+<title>
+My Image Rotator Webpage
+</title>
+<script language="javascript">
+function changeImageSourceSamia()
+{
+var curSrc = document.getElementById('image-id').getAttribute('src');
+if (curSrc == "http://onclick.com/msis110/articles/community-boating-dock.jpg")
+{
+curSrc = "http://onclick.com/msis110/articles/on-the-charles.jpg"
+}
+else
+{
+curSrc = "http://onclick.com/msis110/articles/community-boating-dock.jpg";
+}
+
+document.getElementById('image-id').setAttribute('src', curSrc);
+
+return true;
+}
+
+function changeImageWidthWolforth(newWidth)
+{
+document.getElementById('image-id').setAttribute('width', newWidth);
+return true;
+}
+
+</script>
+</head>
+<body>
+<center>
+<h1>
+Click the image to change it!
+</h1>
+<br/>
+<img
+id="image-id"
+       width="475"
+       onclick="changeImageSourceWolforth();"
+     alt="Charles River photo"
+    src="http://onclick.com/msis110/articles/community-boating-dock.jpg" 
+</img>
+<br />
+<button id="image-width-button" onclick="changeImageWidthWolforth('250');">
+Change Image Width
+</button>
+</body>
 </html>
