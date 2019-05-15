@@ -8,38 +8,49 @@
 			My Image Rotator Webpage
 		</title>
 	 <script>
-	function changeImageWidthAbrego(newWidth)
+	function changeImageWidthAbrego()
 	{
 		// get the image width attribute value
 		// if it is 475 pixels, set it to 100 pixels
 		// else set it to 475 pixels
-		var image_width = document.getElementById("image-id").style.width;
+var image_width = document.getElementById("image-id").style.width;
+        alert("hi1");
 		if (image_width=="475px")
 		{
-			image_witdth="100pxP;
+        alert("hi2");
+			image_width="100px";
 		}
 		else
+      
 		{
+        alert("hi3");
 			image_width="475px";
 		}
-    	
-	    document.getElementById("image-id").style.width = image_width;
+    	alert("hi4");
+        
+	 document.getElementById("image-id").style.width = image_width;
+     alert("hi5");
 		return true;			      
         }
 		 
         function changeImageSourceAbrego()
   	{
 		// checks and the image source
-		var image_src = document.getElementById("image-id").getAttribute("src); 
+        alert("hi10");
+var image_src = document.getElementById("image-id").getAttribute("src"); 
+alert("hi20");
 		if (image_src=="http://onclick.com/msis110/articles/on-the-charles.jpg")
 		{
-			image_src="http://onclick.com/msis110/articles/community-boating-dock.jpg";
+		alert("hi30");	image_src="http://onclick.com/msis110/articles/community-boating-dock.jpg";
 		}
 		else
 		{
-			image_src="http://onclick.com/msis110/articles/on-the-charles.jpg";
+        alert("hi40");
+image_src="http://onclick.com/msis110/articles/on-the-charles.jpg";
 		}
+        alert("hi50");
 		document.getElementById("image-id").setAttribute("src", image_src);
+        alert("hi60");
 		return true;
 	}
 										
@@ -53,15 +64,16 @@
 			</h1>
 			<img
 			     id="image-id"
-		         width="400"
-			     onclick="alert('hi');"
+		         style="width:475px"
+			     onclick="changeImageSourceAbrego();"
 			     alt="Charles River photo"
 			     src="http://onclick.com/msis110/articles/community-boating-dock.jpg">
 			     <br />
-			<button id="image-width-button" onclick="changeImageWidthAbrego('250');">
+			<button id="image-width-button" onclick="changeImageWidthAbrego();">
 				Change Image Width 3
 			</button>
 		</center>
 	</body>
 </html>
+		
 		
